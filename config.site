@@ -16,17 +16,6 @@
 ### along with R; if not, a copy is available at
 ### https://www.r-project.org/Licenses/
 
-## added dhj
-## cargo-culted from https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS
-#CC=clang
-#OBJC=$cc
-#FC="/opt/gfortran/bin/gfortran -mtune=native"
-#CPPFLAGS='-isystem $LOCAL/include'
-#CXX=clang++
-#CFLAGS="-falign-functions=8 -g -O2"
-#FFLAGS="-g -O2 -mmacosx-version-min=11.0"
-#FCFLAGS="-g -O2 -mmacosx-version-min=11.0"
-
 ## By means of this file you can (also) provide default values for the
 ## configuration process.  To set variables, uncomment the VAR=DEFAULT 
 ## lines and set DEFAULT according to your needs.
@@ -56,7 +45,6 @@
 ## It is also necessary to set the architecture here, e.g. 'gcc -m32'.
 ## If this is a wrappwr it should pass on --version to the real compiler.
 ## CC=
-
 
 ## Debugging and optimization options for the C compiler.
 ## Use this to specify CFLAGS for the version of the C compiler
