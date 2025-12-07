@@ -72,3 +72,6 @@ The patch file [`pipe-assignment-operator.patch`](pipe-assignment-operator.patch
 
 Afterwards, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions).
 
+### Vibe-coded with Claude
+
+Yeah, this was vibe-coded! Claude basically one-shotted the Yacc, which is much beyond my capability. 
