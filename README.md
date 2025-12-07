@@ -20,7 +20,7 @@ Arbitrarily complex left hand sides are allowed, including assignment functions 
 
 Chaining <|> is not allowed (and would not make sense).
 
-### Rationale
+## Rationale
 
 For a detailed rationale, see <https://hughjonesd.github.io/case-for-pipe-assignment.html>.
 
@@ -71,6 +71,6 @@ The patch file [`pipe-assignment-operator.patch`](pipe-assignment-operator.patch
 
 Afterwards, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions).
 
-### Vibe-coded with Claude
+## Vibe-coded with Claude
 
 Yeah, this was vibe-coded! Claude basically one-shotted the Yacc, which is much beyond my capability. 
