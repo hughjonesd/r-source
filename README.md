@@ -1,9 +1,9 @@
 
-# R with Pipe Assignment Operator
+# A Pipe Assignment Operator for R
 
-This is a fork of R that adds an experimental pipe assignment operator `<|>`.
+This is a build of R that adds an experimental pipe assignment operator `<|>`.
 
-The operator combines piping with assignment. `LHS <|> RHS` is parsed as `LHS <- RHS(LHS, ...)`.
+`LHS <|> RHS` is parsed as `LHS <- RHS(LHS, ...)`.
 
 ### Examples
 
@@ -70,5 +70,5 @@ The patch file [`pipe-assignment-operator.patch`](pipe-assignment-operator.patch
 - `src/main/gram.c` - Generated parser (regenerated from gram.y)
 - `tests/reg-tests-pipe-assign.R` - Test suite for the operator
 
-After applying the patch, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions).
+Afterwards, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions).
 
