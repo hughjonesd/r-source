@@ -18,7 +18,7 @@ x <|> gsub("pattern", "replacement", x = _)
 
 Arbitrarily complex left hand sides are allowed, including assignment functions and subassignment.
 
-Chaining <|> is not allowed (and would not make sense).
+Chaining `<|>` is not allowed (and would not make sense).
 
 ## Rationale
 
