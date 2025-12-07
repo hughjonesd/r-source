@@ -3,8 +3,6 @@
 
 This is a fork of R that adds an experimental pipe assignment operator `<|>`.
 
-## The Pipe Assignment Operator
-
 The operator combines piping with assignment. `LHS <|> RHS` is parsed as `LHS <- RHS(LHS, ...)`.
 
 ### Examples
@@ -25,12 +23,42 @@ x <|> gsub("pattern", "replacement", x = _)
 
 ### Rationale
 
-For a detailed rationale, see https://hughjonesd.github.io/case-for-pipe-assignment.html
+For a detailed rationale, see <https://hughjonesd.github.io/case-for-pipe-assignment.html>.
 
+The skinny:
 
-## Applying the Patch
+* R is pass-by-value and allows complex subassignment
+* Often we want to simply pass variables, or parts of them, through a function
+* Doing this involves repeating oneself
 
-If you have an existing R source tree (from SVN or a tar file) and want to add the pipe assignment operator, you can apply the provided patch:
+In other words, it would be nice to write
+
+```r
+names(x)[1:5] <|> toupper()
+```
+
+instead of
+
+```r
+names(x)[1:5] <- toupper(names(x)[1:5])
+```
+
+and
+
+```r
+my_data[rows, cols] <|> as.numeric()
+```
+
+instead of
+
+```r
+my_data[rows, cols] <- as.numeric(my_data[rows, cols])
+```
+
+## Source Patch
+
+You can build this version from github source using the build-R.sh script.
+Alternatively, if you have an existing R source tree (from SVN or a tar file) and want to add the pipe assignment operator, you can apply the provided patch:
 
 ```bash
 cd /path/to/r-source
@@ -44,6 +72,3 @@ The patch file [`pipe-assignment-operator.patch`](pipe-assignment-operator.patch
 
 After applying the patch, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions).
 
-## Building
-
-See the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for instructions on building R from source, or use the provided `build-r.sh` script.
