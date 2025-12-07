@@ -9,17 +9,16 @@ This is a build of R that adds an experimental pipe assignment operator `<|>`.
 
 ```r
 x <|> foo()             # becomes  x <- foo(x)
+x[item] <|> foo()       # becomes x[item] <- foo(x[item])
 x$elem <|> foo()        # becomes  x$elem <- foo(x$elem)
 names(x) <|> toupper()  # becomes  names(x) <- toupper(names(x))
 x <|> gsub("pattern", "replacement", x = _)
                         # becomes  x <- gsub("pattern", "replacement", x = x)
 ```
 
-### Features
+Arbitrarily complex left hand sides are allowed, including assignment functions and subassignment.
 
-- Works with any valid left-hand side of `<-` (variables, subscripts, replacement functions)
-- Supports the placeholder `_` in named arguments, like the `|>` operator
-- Non-associative (chaining is not allowed)
+Chaining <|> is not allowed (and would not make sense).
 
 ### Rationale
 
