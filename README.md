@@ -54,10 +54,10 @@ instead of
 my_data[rows, cols] <- as.numeric(my_data[rows, cols])
 ```
 
-## Source Patch
+## Building 
 
 You can build this version from github source using the build-R.sh script.
-Alternatively, if you have an existing R source tree (from SVN or a tar file) and want to add the pipe assignment operator, you can apply the provided patch:
+Alternatively, if you have an existing R source tree, you can apply the provided patch:
 
 ```bash
 cd /path/to/r-source
@@ -69,7 +69,7 @@ The patch file [`pipe-assignment-operator.patch`](pipe-assignment-operator.patch
 - `src/main/gram.c` - Generated parser (regenerated from gram.y)
 - `tests/reg-tests-pipe-assign.R` - Test suite for the operator
 
-Afterwards, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions).
+Afterwards, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions from github).
 
 ## Vibe-coded with Claude
 
