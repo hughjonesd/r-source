@@ -8,7 +8,7 @@ This is a build of R that adds an experimental pipe assignment operator `<|>`.
 ### Examples
 
 ```r
-x <|> foo()             # becomes  x <- foo(x)
+x <|> sqrt()             # becomes  x <- sqrt(x)
 x[item] <|> foo()       # becomes x[item] <- foo(x[item])
 x$elem <|> foo()        # becomes  x$elem <- foo(x$elem)
 names(x) <|> toupper()  # becomes  names(x) <- toupper(names(x))
