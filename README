@@ -33,6 +33,22 @@ R is a language and environment for statistical computing and graphics. It is a 
 
 For more information about R, visit https://www.r-project.org/
 
+## Applying the Patch
+
+If you have an existing R source tree (from SVN or a tar file) and want to add the pipe assignment operator, you can apply the provided patch:
+
+```bash
+cd /path/to/r-source
+patch -p1 < pipe-assignment-operator.patch
+```
+
+The patch file [`pipe-assignment-operator.patch`](pipe-assignment-operator.patch) modifies:
+- `src/main/gram.y` - Grammar file with pipe assignment operator
+- `src/main/gram.c` - Generated parser (regenerated from gram.y)
+- `tests/reg-tests-pipe-assign.R` - Test suite for the operator
+
+After applying the patch, build R as usual (see the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for build instructions).
+
 ## Building
 
-See the `INSTALL` file for instructions on building R from source, or use the provided `build-r.sh` script.
+See the [wch/r-source wiki](https://github.com/wch/r-source/wiki) for instructions on building R from source, or use the provided `build-r.sh` script.
