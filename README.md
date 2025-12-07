@@ -27,11 +27,6 @@ x <|> gsub("pattern", "replacement", x = _)
 
 For a detailed rationale, see https://hughjonesd.github.io/case-for-pipe-assignment.html
 
-## About R
-
-R is a language and environment for statistical computing and graphics. It is a GNU project which is similar to the S language and environment developed at Bell Laboratories.
-
-For more information about R, visit https://www.r-project.org/
 
 ## Applying the Patch
 
